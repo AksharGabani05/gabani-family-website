@@ -3,6 +3,9 @@ import { Container, Row, Col, Button, Carousel, Modal, Form, Card, Accordion } f
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from '../Header';
 import Events from './Events';
+import sliderImage1 from '../../images/slider-image1.JPG';
+import sliderImage2 from '../../images/slider-image2.JPG';
+
 
 // Global Style for Font
 const GlobalStyle = createGlobalStyle`
@@ -108,12 +111,8 @@ function Home() {
       {/* Hero Section */}
       <Carousel>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider-image1.jpg"
-            alt="First slide"
-            style={{ filter: 'brightness(60%)' }}
-          />
+        <img className="d-block w-100" src={sliderImage1} alt="First slide" />
+        
           <Carousel.Caption>
             <SectionTitle color="#fff">Welcome to Gabani Parivar</SectionTitle>
             <SectionDescription color="#ddd">
@@ -122,12 +121,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider-image2.jpg"
-            alt="Second slide"
-            style={{ filter: 'brightness(60%)' }}
-          />
+        <img className="d-block w-100" src={sliderImage2} alt="Second slide" />
           <Carousel.Caption>
             <SectionTitle color="#fff">Explore Our Heritage</SectionTitle>
             <SectionDescription color="#ddd">
