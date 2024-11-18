@@ -26,11 +26,7 @@ function Header({ isAuthenticated, onLoginShow }) {
               
            
             
-            {!isAuthenticated && (
-              <Button variant="outline-light" onClick={onLoginShow} className="ml-3">
-                User Login
-              </Button>
-            )}
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

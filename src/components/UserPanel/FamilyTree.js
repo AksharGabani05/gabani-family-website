@@ -147,6 +147,7 @@ const FamilyTree = () => {
 
   if (loading) {
     return (
+      
       <FamilyTreeContainer>
         <Title>Family Tree</Title>
         <Loader>Loading family data...</Loader>

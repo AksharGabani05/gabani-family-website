@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Modal, Button, Table } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 // Styled Components
 const Container = styled.div`
@@ -33,10 +36,16 @@ const InputWrapper = styled.div`
 const StyledTable = styled(Table)`
   margin-top: 20px;
   width: 100%; /* Ensure table takes full width */
-
+  
   th, td {
     text-align: center;
   }
+`;
+
+const ActionsContainer = styled.div`
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
 `;
 
 const ManageMembers = () => {
@@ -163,16 +172,22 @@ const ManageMembers = () => {
            (member.village && member.village.toLowerCase().includes(villageFilter.toLowerCase())) &&
            (member.district && member.district.toLowerCase().includes(districtFilter.toLowerCase())) &&
            withinAgeRange;
-});
-
+  });
 
   // Function to apply filters from filter modal
   const applyFilters = () => {
     setShowFilterModal(false);
   };
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate(-1); // or navigate('/some-path');
+};
 
   return (
-    <Container>
+    <Container><Button variant="secondary" onClick={handleBack}>
+    <FontAwesomeIcon icon={faArrowLeft} className="me-1"/>
+    Back
+  </Button>
       <Title>Manage Members</Title>
       <InputWrapper>
         <input
@@ -215,12 +230,14 @@ const ManageMembers = () => {
               <td>{member.mobile}</td>
               <td>{member.email}</td>
               <td>
-                <Button variant="warning" onClick={() => editMember(member)}>
-                  Edit
-                </Button>
-                <Button variant="danger" onClick={() => deleteMember(member.id)}>
-                  Delete
-                </Button>
+                <ActionsContainer>
+                  <Button variant="warning" onClick={() => editMember(member)}>
+                    Edit
+                  </Button>
+                  <Button variant="danger" onClick={() => deleteMember(member.id)}>
+                    Delete
+                  </Button>
+                </ActionsContainer>
               </td>
             </tr>
           ))}

@@ -1,24 +1,14 @@
 {
   "members": [
     {
-      "id": "1",
-      "name": "Akshar Gabani",
-      "birthDate": "2005-04-09",
-      "village": "Dared",
-      "district": "Bhavanagar",
-      "mobile": "9265947002",
-      "email": "akshargabani9425@gmail.com",
-      "password": "991360"
-    },
-    {
       "id": "2",
-      "name": "Aditi Sharma",
-      "birthDate": "1995-05-14",
-      "village": "Nadiad",
-      "district": "Kheda",
-      "mobile": "9876543210",
-      "email": "aditisharma@gmail.com",
-      "password": "aditi@123"
+      "name": "Ayush Gabani",
+      "birthDate": "2007-08-06",
+      "village": "Lakhanka",
+      "district": "Botad",
+      "mobile": "7069412416",
+      "email": "ayushgabani24@gmail.com",
+      "password": "Gabani@7069"
     },
     {
       "id": "3",
@@ -1104,6 +1094,16 @@
       "mobile": "",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "101",
+      "name": "Dakshaben",
+      "birthDate": "2010-08-28",
+      "village": "Dared",
+      "district": "Bhavanagar",
+      "mobile": "8160608443",
+      "email": "dakshaben945@gmail.com",
+      "password": "Daksha@123"
     }
   ],
   "images": [
@@ -1128,6 +1128,37 @@
         "generated",
         "example"
       ]
+    }
+  ],
+  "admin-users": [
+    {
+      "name": "Akshar",
+      "phone": "54120",
+      "email": "akshargabani9425@gmail.com",
+      "village": "Surat",
+      "district": "bhavnagar",
+      "password": "9913608443",
+      "id": "6650"
+    },
+    {
+      "id": "a30d",
+      "name": "Ayush",
+      "phone": "7069412416",
+      "email": "ayushgabani24@gmail.com",
+      "village": "Lakkhanka",
+      "district": "Botad",
+      "password": "Gabani@7069"
+    }
+  ],
+  "Events": [
+    {
+      "id": "1",
+      "name": "Akshar Gabani",
+      "date": "2024-12-01",
+      "time": "10:00 AM",
+      "location": "Kathiyawad",
+      "description": "A joyous reunion to reconnect and celebrate with family members.",
+      "image": "https://content.jdmagicbox.com/comp/ernakulam/m4/0484px484.x484.140206113128.a9m4/catalogue/we-create-events-panampilly-nagar-ernakulam-event-management-companies-nsobpzm660.jpg"
     }
   ]
 }
